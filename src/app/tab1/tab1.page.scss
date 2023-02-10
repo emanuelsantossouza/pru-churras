@@ -1,0 +1,14 @@
+img{
+  height: 50%;
+  border-radius: 50%;
+  box-shadow: 4px 4px 4px 0px rgba(157,157,157,0.74);
+  -webkit-box-shadow: 4px 4px 4px 0px rgba(157,157,157,0.74);
+  -moz-box-shadow: 4px 4px 4px 0px rgba(157,157,157,0.74);
+}
+
+.container-coin{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-flow: column; /* Manda como deve ser trabalhado*/
+}
