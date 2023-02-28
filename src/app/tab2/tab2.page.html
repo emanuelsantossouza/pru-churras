@@ -7,59 +7,62 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-item >
-    <ion-row class="barraDNumeros">
-        <ion-col >
-          <ion-button shape="round" fill="solid" color="tertiary" size="small">1</ion-button>
-        </ion-col>
-        <ion-col>
-          <ion-button shape="round" fill="solid" color="tertiary" size="small">3</ion-button>
-        </ion-col>
-        <ion-col>
-          <ion-button shape="round" fill="solid" color="tertiary" size="small">6</ion-button>
-        </ion-col>
-        <ion-col>
-          <ion-button shape="round" fill="solid" color="tertiary" size="small">9</ion-button>
-        </ion-col>
-        <ion-col>
-          <ion-button shape="round" fill="solid" color="tertiary" size="small">12</ion-button>
-        </ion-col>
-      </ion-row>
-    </ion-item>
+  <div class="background"></div>
+  <div class="container">
+  
+      <ion-row class="barraDNumeros">
+          <ion-col >
+            <ion-button shape="round" fill="solid" color="tertiary" size="small">1</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button shape="round" fill="solid" color="tertiary" size="small">3</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button shape="round" fill="solid" color="tertiary" size="small">6</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button shape="round" fill="solid" color="tertiary" size="small">9</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button shape="round" fill="solid" color="tertiary" size="small">12</ion-button>
+          </ion-col>
+        </ion-row>
+    
+    <ion-row>
+      <ion-col size="6" class="column">
+        <ion-row class="row-center">
+          <ion-button shape="round" fill="solid" color="tertiary">+</ion-button>
+        </ion-row>
+  
+        <ion-row class="row-center">
+          <ion-label>0</ion-label>
+        </ion-row>
+  
+        <ion-row class="row-center">
+          <ion-button shape="round" fill="solid" color="tertiary">-</ion-button>
+        </ion-row>
+      </ion-col>
+  
+      <ion-col size="6" class="column">
+        <ion-row class="row-center">
+          <ion-button shape="round" fill="solid" color="tertiary">+</ion-button>
+        </ion-row>
+  
+        <ion-row class="row-center">
+          <ion-label>0</ion-label>
+        </ion-row>
+  
+        <ion-row class="row-center">
+          <ion-button shape="round" fill="solid" color="tertiary">-</ion-button>
+        </ion-row>
+  
+      </ion-col>
+    </ion-row>
+  </div>
 
-
-  <ion-row>
-    <ion-col size="6" class="column">
-      <ion-row class="row-center">
-        <ion-button shape="round" fill="solid" color="tertiary">+</ion-button>
-      </ion-row>
-
-      <ion-row class="row-center">
-        <ion-label>0</ion-label>
-      </ion-row>
-
-      <ion-row class="row-center">
-        <ion-button shape="round" fill="solid" color="tertiary">-</ion-button>
-      </ion-row>
-    </ion-col>
-
-    <ion-col size="6" class="column">
-      <ion-row class="row-center">
-        <ion-button shape="round" fill="solid" color="tertiary">+</ion-button>
-      </ion-row>
-
-      <ion-row class="row-center">
-        <ion-label>0</ion-label>
-      </ion-row>
-
-      <ion-row class="row-center">
-        <ion-button shape="round" fill="solid" color="tertiary">-</ion-button>
-      </ion-row>
-
-    </ion-col>
-  </ion-row>
+ 
+ 
 </ion-content>
-
 <ion-footer>
   <ion-toolbar>
     <ion-row class="row-center footer">
@@ -74,3 +77,4 @@
     </ion-row>
   </ion-toolbar>
 </ion-footer>
+

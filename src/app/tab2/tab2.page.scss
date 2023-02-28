@@ -4,7 +4,11 @@
 }
 
 .barraDNumeros{
-  margin-left: 40px;
+padding: 25px;
+
+
+padding: 25px;
+
 }
 
 .numeros{
@@ -16,10 +20,30 @@
 }
 
 .column {
-  padding: 50px;
-  margin-top: 6.0rem;
+  padding: 25px;
+  margin-top: 4.0rem;
 }
 
 .footer{
   margin-left: 40px;
+}
+
+
+.background{
+  height: 100%;
+  width: 100%;
+  background: url("https://leegues.com/wp-content/uploads/2021/03/como-jogar-truco-regras-1024x538.png");
+  background-size: cover;
+  filter: opacity(65%);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.container{
+  position: relative;
+  top: 0;
+  height: 100%;
+  width: 100%;
+
 }
