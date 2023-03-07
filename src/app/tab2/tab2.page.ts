@@ -97,4 +97,10 @@ export class Tab2Page {
         this.valendo = +12
       }
     }
+
+
+
+    mudaCor(valor: number){
+      return this.valendo == valor ? "outline" : "solid"
+    }
   }

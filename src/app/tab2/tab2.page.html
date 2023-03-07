@@ -17,19 +17,19 @@
   
       <ion-row class="barraDNumeros">
           <ion-col>
-            <ion-button (click)="AdicionarMaisUm()" fill="solid" color="tertiary" size="small">1</ion-button>
+            <ion-button  (click)="AdicionarMaisUm()" [fill]="mudaCor()"  size="small">1</ion-button>
           </ion-col>
           <ion-col>
-            <ion-button (click)="AdicionarMaisTres()" fill="solid" color="tertiary" size="small">3</ion-button>
+            <ion-button (click)="AdicionarMaisTres()" [fill]="mudaCor()"  size="small">3</ion-button>
           </ion-col>
           <ion-col>
-            <ion-button (click)="AdicionarMaisSeis()"  fill="solid" color="tertiary" size="small">6</ion-button>
+            <ion-button (click)="AdicionarMaisSeis()"  [fill]="mudaCor()"  size="small">6</ion-button>
           </ion-col>
           <ion-col>
-            <ion-button (click)="AdicionarMaisNove()"  fill="solid" color="tertiary" size="small">9</ion-button>
+            <ion-button (click)="AdicionarMaisNove()"  [fill]="mudaCor()"  size="small">9</ion-button>
           </ion-col>
           <ion-col>
-            <ion-button (click)="AdicionarMaisDoze()" fill="solid" color="tertiary" size="small">12</ion-button>
+            <ion-button (click)="AdicionarMaisDoze()" [fill]="mudaCor()"  size="small">12</ion-button>
           </ion-col>
         </ion-row>
     
