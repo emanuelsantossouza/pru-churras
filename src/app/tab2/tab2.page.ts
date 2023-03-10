@@ -9,98 +9,67 @@ import { async } from 'rxjs';
 })
 export class Tab2Page {
 
-  constructor(private alertController: AlertController) {}
+  constructor() { }
 
   valendo = 1;
   pontosTime1 = 0;
   pontosTime2 = 0;
-  time1 = 1;
-  time2 = 1;
-  conta = 0;
-  mais1 = 1;
-  mais3 = 3;
-  mais6 = 6;
-  mais12 = 12; 
+  time1 = 0;
+  time2 = 0;
 
 
-  handlerMessage = '';
-  roleMessage = '';
+  comeco() {
+    this.valendo = 1;
+  }
 
+  truco() {
+    this.valendo = 3;
+  }
 
+  truco6() {
+    this.valendo = 6;
+  }
 
-  async Mais(){
-    if(this.valendo <= 11){
-      this.valendo = +1
-    }else {
-        const alert = await this.alertController.create({
-           header: 'Alert!',
-           buttons: [
-            {
-              text: 'Cancel',
-              role: 'cancel',
-              handler: () => {
-                this.handlerMessage = 'Alert canceled';
-              },
-            },
-            {
-              text: 'OK',
-              role: 'confirm',
-              handler: () => {
-                this.handlerMessage = 'Alert confirmed';
-              },
-            },
-          ],
-        });
-      
-        await alert.present();
-      
-        const { role } = await alert.onDidDismiss();
-        this.roleMessage = `Dismissed with role: ${role}`;
-      }
-    }
+  truco9() {
+    this.valendo = 9;
+  }
 
-    Menos(){
-      this.valendo -1 
-    }
+  truco12() {
+    this.valendo = 12;
+  }
 
-    AdicionarMaisUm(){
-      this.valendo = this.mais1
-    }
-
-    AdicionarMaisTres(){
-      this.valendo = this.mais3
-    }
-
-    AdicionarMaisSeis(){
-      if(this.valendo == 11){
-        this.valendo = +1
-        alert("Acabou!!!")
-      }else{
-        this.valendo = +6
-      }
-    }
-
-    AdicionarMaisNove(){
-      if(this.valendo == 11){
-        this.valendo = +1
-        alert("Acabou!!!")
-      }else{
-        this.valendo = +9
-      }
-    }
-
-    AdicionarMaisDoze(){
-      if(this.valendo <= 11){
-        this.valendo = +1
-        alert("Acabou!!!")
-      }else{
-        this.valendo = +12
-      }
-    }
-
-
-
-    mudaCor(valor: number){
-      return this.valendo == valor ? "outline" : "solid"
+  somaTime1() {
+    this.pontosTime1 = this.valendo + this.pontosTime1;
+    if (this.pontosTime1 >= 12) {
+      this.time1++;
     }
   }
+
+  menosTime1(){
+    this.pontosTime1 = this.valendo - this.pontosTime1;
+  }
+
+ 
+  somaTime2() {
+    this.pontosTime2 = this.valendo + this.pontosTime2;
+    if (this.pontosTime2 >= 12) {
+      this.time2++;
+    }
+  }
+
+  menosTime2(){
+    this.pontosTime2 = this.valendo - this.pontosTime2;
+  }
+
+  limparTruco(){
+    this.pontosTime1 = 0;
+    this.pontosTime2 = 0;
+    this.time1 = 0;
+    this.time2 = 0;
+    this.valendo = 1;
+  }
+}
+
+    // mudaCor(valor: number){
+    //   return this.valendo == valor ? "outline" : "solid"
+    // }

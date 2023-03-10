@@ -3,6 +3,7 @@
     <ion-title class="ion-text-center">
       Truco
     </ion-title>
+    <ion-icon (click)="limparTruco()" name="trash-outline"></ion-icon>
   </ion-toolbar>
 </ion-header>
 
@@ -17,26 +18,26 @@
   
       <ion-row class="barraDNumeros">
           <ion-col>
-            <ion-button  (click)="AdicionarMaisUm()" [fill]="mudaCor()"  size="small">1</ion-button>
+            <ion-button  (click)="comeco()"  size="small">1</ion-button>
           </ion-col>
           <ion-col>
-            <ion-button (click)="AdicionarMaisTres()" [fill]="mudaCor()"  size="small">3</ion-button>
+            <ion-button (click)="truco()"  size="small">3</ion-button>
           </ion-col>
           <ion-col>
-            <ion-button (click)="AdicionarMaisSeis()"  [fill]="mudaCor()"  size="small">6</ion-button>
+            <ion-button (click)="truco6()"   size="small">6</ion-button>
           </ion-col>
           <ion-col>
-            <ion-button (click)="AdicionarMaisNove()"  [fill]="mudaCor()"  size="small">9</ion-button>
+            <ion-button (click)="truco9()"   size="small">9</ion-button>
           </ion-col>
           <ion-col>
-            <ion-button (click)="AdicionarMaisDoze()" [fill]="mudaCor()"  size="small">12</ion-button>
+            <ion-button (click)="truco12()"   size="small">12</ion-button>
           </ion-col>
         </ion-row>
     
     <ion-row>
       <ion-col size="6" class="column">
         <ion-row class="row-center">
-          <ion-button  shape="round" fill="solid" color="tertiary">+</ion-button>
+          <ion-button (click)="somaTime1()" shape="round" fill="solid" color="tertiary">+</ion-button>
         </ion-row>
   
         <ion-row class="row-center">
@@ -46,13 +47,13 @@
         </ion-row>
   
         <ion-row class="row-center">
-          <ion-button shape="round" fill="solid" color="tertiary">-</ion-button>
+          <ion-button (click)="menosTime1" shape="round" fill="solid" color="tertiary">-</ion-button>
         </ion-row>
       </ion-col>
   
       <ion-col size="6" class="column">
         <ion-row class="row-center">
-          <ion-button (click)="Mais()" shape="round" fill="solid" color="tertiary">+</ion-button>
+          <ion-button (click)="somaTime2()" shape="round" fill="solid" color="tertiary">+</ion-button>
         </ion-row>
   
         <ion-row class="row-center">
@@ -62,7 +63,7 @@
         </ion-row>
   
         <ion-row class="row-center">
-          <ion-button (click)="Menos()" shape="round" fill="solid" color="tertiary">-</ion-button>
+          <ion-button (click)="menosTime2" shape="round" fill="solid" color="tertiary">-</ion-button>
         </ion-row>
       </ion-col>
     </ion-row>
@@ -72,7 +73,6 @@
          <ion-item>
           <ion-badge slot="end">{{time1}}</ion-badge>
            <ion-label for="">Time 1</ion-label>
-
          </ion-item>
 
          <ion-item>
