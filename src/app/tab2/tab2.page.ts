@@ -18,47 +18,46 @@ export class Tab2Page {
   time2 = 0;
 
 
-  comeco() {
-    this.valendo = 1;
-  }
+  chamaTruco(chama: number){
+    this.valendo = chama
 
-  truco() {
-    this.valendo = 3;
-  }
-
-  truco6() {
-    this.valendo = 6;
-  }
-
-  truco9() {
-    this.valendo = 9;
-  }
-
-  truco12() {
-    this.valendo = 12;
+    if(this.valendo == 12){
+      alert("Acabou marreco")
+    }
   }
 
   somaTime1() {
     this.pontosTime1 = this.valendo + this.pontosTime1;
-    if (this.pontosTime1 >= 12) {
-      this.time1++;
-    }
+    if (this.pontosTime1 >= 12 ) {
+     alert("acabou marreco!!!");
+      this.pontosTime1 = 0;
+      this.time1 =1
+      this.valendo = 1
+    } 
   }
 
   menosTime1(){
-    this.pontosTime1 = this.valendo - this.pontosTime1;
+    if(this.pontosTime1 >= 2) {
+      this.pontosTime1 --;
+    }
+    
   }
 
- 
   somaTime2() {
     this.pontosTime2 = this.valendo + this.pontosTime2;
-    if (this.pontosTime2 >= 12) {
-      this.time2++;
-    }
+    if (this.pontosTime2 == 13) {
+      alert("acabou marreco!!!");
+      this.pontosTime2 = 0;
+      this.time2 = 1
+      this.valendo = 1
+    } 
+    
   }
 
   menosTime2(){
-    this.pontosTime2 = this.valendo - this.pontosTime2;
+    if(this.pontosTime2 >= 2) {
+      this.pontosTime2 --;
+    }
   }
 
   limparTruco(){
@@ -68,8 +67,11 @@ export class Tab2Page {
     this.time2 = 0;
     this.valendo = 1;
   }
+
+  mudaCor(valor: number){
+    return this.valendo == valor ? "outline" : "solid"
+ }
+
 }
 
-    // mudaCor(valor: number){
-    //   return this.valendo == valor ? "outline" : "solid"
-    // }
+

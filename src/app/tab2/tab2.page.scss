@@ -3,16 +3,26 @@
   padding: 0;
 }
 
-.barraDNumeros{
-padding: 15px;
+ion-icon {
+  margin-right: -10px;
 }
 
-.numeros{
-  padding:4px;
+
+.barraDNumeros {
+  padding: 15px;
 }
 
-.row-center {
-  justify-content: center;
+.nomeTime {
+  margin-top: 3px; 
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  border: 1px solid ;
+}
+
+.contador{
+  margin-top: -70px;
 }
 
 .column {
@@ -20,12 +30,24 @@ padding: 15px;
   margin-top: 4.0rem;
 }
 
-.footer{
+.row-center {
+  justify-content: center;
+  margin: 10px;
+}
+
+.numeros {
+  padding: 4px;
+}
+
+
+
+
+.footer {
   margin-left: 40px;
 }
 
 
-.background{
+.background {
   height: 100%;
   width: 100%;
   background: url("https://leegues.com/wp-content/uploads/2021/03/como-jogar-truco-regras-1024x538.png");
@@ -36,7 +58,7 @@ padding: 15px;
   left: 0;
 }
 
-.container{
+.container {
   position: relative;
   top: 0;
   height: 100%;
@@ -44,17 +66,30 @@ padding: 15px;
 
 }
 
-.valendo{
-  margin-top: 10px;
-}
 
-ion-badge{
+ion-badge {
   width: 20px;
   height: 20px;
-
-
 }
 
-.ponto{
+.ponto {
   margin-left: 15px;
+}
+
+ion-row {
+  margin: 0px
+}
+
+
+.pontos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+h5{
+  font-size: 20px;
+  font-weight: 600;
 }

@@ -1,9 +1,9 @@
 <ion-header [translucent]="true">
-  <ion-toolbar color="tertiary">
+  <ion-toolbar color="dark">
     <ion-title class="ion-text-center">
       Truco
     </ion-title>
-    <ion-icon (click)="limparTruco()" name="trash-outline"></ion-icon>
+
   </ion-toolbar>
 </ion-header>
 
@@ -13,78 +13,83 @@
 
     <ion-item class="valendo ion-text-center">
       <ion-title>Valendo: {{valendo}}</ion-title>
+      <ion-icon color="danger" (click)="limparTruco()" slot="end" name="trash-outline"></ion-icon>
     </ion-item>
-    
-  
-      <ion-row class="barraDNumeros">
-          <ion-col>
-            <ion-button  (click)="comeco()"  size="small">1</ion-button>
-          </ion-col>
-          <ion-col>
-            <ion-button (click)="truco()"  size="small">3</ion-button>
-          </ion-col>
-          <ion-col>
-            <ion-button (click)="truco6()"   size="small">6</ion-button>
-          </ion-col>
-          <ion-col>
-            <ion-button (click)="truco9()"   size="small">9</ion-button>
-          </ion-col>
-          <ion-col>
-            <ion-button (click)="truco12()"   size="small">12</ion-button>
-          </ion-col>
-        </ion-row>
-    
-    <ion-row>
+
+
+    <div class="nomeTime">
+      <h5>Time 1</h5>
+      <h5>Time 2</h5>
+    </div>
+
+    <ion-row class="contador">
       <ion-col size="6" class="column">
         <ion-row class="row-center">
-          <ion-button (click)="somaTime1()" shape="round" fill="solid" color="tertiary">+</ion-button>
+          <ion-button (click)="somaTime1()" shape="round" fill="solid" color="danger">+</ion-button>
         </ion-row>
-  
+
         <ion-row class="row-center">
           <ion-item>
             <ion-label>{{pontosTime1}}</ion-label>
           </ion-item>
         </ion-row>
-  
+
         <ion-row class="row-center">
-          <ion-button (click)="menosTime1" shape="round" fill="solid" color="tertiary">-</ion-button>
+          <ion-button (click)="menosTime1()" shape="round" fill="solid" color="danger">-</ion-button>
         </ion-row>
       </ion-col>
-  
+
       <ion-col size="6" class="column">
         <ion-row class="row-center">
-          <ion-button (click)="somaTime2()" shape="round" fill="solid" color="tertiary">+</ion-button>
+          <ion-button (click)="somaTime2()" shape="round" fill="solid" color="danger">+</ion-button>
         </ion-row>
-  
+
         <ion-row class="row-center">
           <ion-item>
             <ion-label>{{pontosTime2}}</ion-label>
           </ion-item>
         </ion-row>
-  
+
         <ion-row class="row-center">
-          <ion-button (click)="menosTime2" shape="round" fill="solid" color="tertiary">-</ion-button>
+          <ion-button (click)="menosTime2()" shape="round" fill="solid" color="danger">-</ion-button>
         </ion-row>
       </ion-col>
     </ion-row>
 
 
-    <ion-title class="">Pontos</ion-title>
-         <ion-item>
-          <ion-badge slot="end">{{time1}}</ion-badge>
-           <ion-label for="">Time 1</ion-label>
-         </ion-item>
+    <ion-row class="barraDNumeros">
+      <ion-col>
+        <ion-button (click)="chamaTruco(1)" color="danger" [fill]="mudaCor(1)">1</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="chamaTruco(3)" color="danger" [fill]="mudaCor(3)">3</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="chamaTruco(6)" color="danger" [fill]="mudaCor(6)" >6</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="chamaTruco(9)" color="danger" [fill]="mudaCor(9)">9</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="chamaTruco(12)" color="danger" [fill]="mudaCor(12)">12</ion-button>
+      </ion-col>
+    </ion-row>
 
-         <ion-item>
-          <ion-badge slot="end">{{ time2 }}</ion-badge>
-           <ion-label >Time 2</ion-label>
-         </ion-item>
-      
-  
+
+    <ion-title class="ion-text-center">Pontos</ion-title>
+    <ion-item>
+      <ion-badge color="danger" slot="end">{{time1}}</ion-badge>
+      <ion-label>Time 1</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-badge color="danger" slot="end">{{time2}}</ion-badge>
+      <ion-label>Time 2</ion-label>
+    </ion-item>
+
+
   </div>
 
- 
- 
+
+
 </ion-content>
-
-
