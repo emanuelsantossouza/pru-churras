@@ -24,6 +24,7 @@ export class Tab2Page {
     if(this.valendo == 12){
       alert("Acabou marreco")
     }
+    this.valendo = 1;
   }
 
   somaTime1() {
